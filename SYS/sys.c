@@ -47,3 +47,12 @@ void Delay_s(uint32_t xs)
 		Delay_ms(1000);
 	}
 } 
+
+
+//printf重定向至串口1
+int fputc(int ch,FILE *p) //函数默认的，在使用 printf 函数时自动调用
+{
+  USART_SendData(USART1,(u8)ch);
+  while(USART_GetFlagStatus(USART1,USART_FLAG_TXE)==RESET);
+  return ch;
+}

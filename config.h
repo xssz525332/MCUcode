@@ -37,6 +37,8 @@
 #if baohe
 	#include "sys.h"
 	#include "led.h"
+	#include "iic.h"
+	#include "at24c02.h"
 #endif
 
 

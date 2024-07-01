@@ -20,6 +20,9 @@
 		
 		#define LED0_RCC	RCC_APB2Periph_GPIOB
 		#define	LED1_RCC	RCC_APB2Periph_GPIOE
+		
+		#define LED1_READ	GPIO_ReadInputDataBit(LED1_Port,LED1_Pin)
+		#define LED0_READ	GPIO_ReadInputDataBit(LED0_Port,LED0_Pin)
 	#endif	
 #endif
 
@@ -31,6 +34,7 @@
 void LED_init(void);
 void LED0(uint8_t level);
 void LED1(uint8_t level);
+void LED_Rollback(uint8_t LED);
 
 #endif
 

@@ -1,8 +1,5 @@
 #include "sys.h"
 
-static uint32_t fac_us;	//定义 1 个微秒的值
-static uint32_t fac_ms;	//定义 1 个毫秒的值
-
 //目前无初始化系统资源,留待以后写
 void sys_init(void)
 {

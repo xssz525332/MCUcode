@@ -3,7 +3,8 @@
 //目前无初始化系统资源,留待以后写
 void sys_init(void)
 {
-	
+	/* 配置NVIC为优先级组1 */
+	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_1);
 
 }
 //以下借用江协科技代码
@@ -56,3 +57,4 @@ int fputc(int ch,FILE *p) //函数默认的，在使用 printf 函数时自动调用
   while(USART_GetFlagStatus(USART1,USART_FLAG_TXE)==RESET);
   return ch;
 }
+
